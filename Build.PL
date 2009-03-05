@@ -1,27 +1,11 @@
-#!perl -w
-
-=pod
-
-Build the CPAN distribution for this project
-
-=cut
-
 use Module::Build;
-use File::Copy;
-
-for(qw(lib lib/Math lib/Math/Permute))
- {mkdir or die $! unless -d;
- }
-copy("List.pm", "lib/Math/Permute/List.pm");
 
 my $b = Module::Build->new
- (module_name => 'Math::Permute::List',
-  dist_abstract=><<'END',
-Generate all permutations of a list.
-END
-  license=>'perl',
-  author=>'PhilipRBrenan@handybackup.com',
+ (module_name   => 'Math::Permute::List',
+  dist_author   => 'PhilipRBrenan@handybackup.com',
+  dist_abstract => 'Generate all the permutations of a list.',
+  license       => 'perl',
+  create_readme =>  1,
  );
 
-$b->create_build_script() 
-
+$b->create_build_script();

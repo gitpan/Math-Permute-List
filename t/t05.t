@@ -1,10 +1,10 @@
 use Test::More qw(no_plan);
 
-my $a = '';
-
 use Math::Permute::List;
 
-permute {$a .= "@_\n"} 1..5;
+my $a = '';
+
+ok 120 == permute {$a .= "@_\n"} 1..5;
 
 ok $a eq << 'end';
 1 2 3 4 5

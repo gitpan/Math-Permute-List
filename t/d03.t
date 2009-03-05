@@ -4,14 +4,14 @@ use Math::Permute::List;
 
 my $a = '';
 
-ok 6 == permute {$a .= "@_\n"} 1..3;
+ok 6 == permute {$a .= "@_\n"} qw(a b c);
 
 ok $a eq << 'end';
-1 2 3
-1 3 2
-2 1 3
-3 1 2
-2 3 1
-3 2 1
+a b c
+a c b
+b a c
+c a b
+b c a
+c b a
 end
 

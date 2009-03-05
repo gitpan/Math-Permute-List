@@ -1,8 +1,9 @@
 ---
 name: Math-Permute-List
-version: 1.0
+version: 1.001
 author:
-abstract: "Generate all permutations of a list.\n"
+  - 'PhilipRBrenan@handybackup.com'
+abstract: Generate all the permutations of a list.
 license: perl
 generated_by: Module::Build version 0.280801
 meta-spec:
@@ -11,6 +12,6 @@ meta-spec:
 provides:
   Math::Permute::List:
     file: lib/Math/Permute/List.pm
-    version: 1.0
+    version: 1.001
 resources:
   license: http://dev.perl.org/licenses/

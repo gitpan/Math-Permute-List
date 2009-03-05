@@ -4,14 +4,10 @@ use Math::Permute::List;
 
 my $a = '';
 
-ok 6 == permute {$a .= "@_\n"} 1..3;
+eval {permute {$a .= "@_\n"; die;} 1..2};
+
 
 ok $a eq << 'end';
-1 2 3
-1 3 2
-2 1 3
-3 1 2
-2 3 1
-3 2 1
+1 2
 end
 

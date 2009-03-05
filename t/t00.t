@@ -7,11 +7,12 @@ called.
 
 =cut
 
-my $a = '';
 
 use Math::Permute::List;
 
-permute {$a .= "@_\n"} ();
+my $a = '';
+
+ok 0 == permute {$a .= "@_\n"} ();
 
 ok $a eq '';
 
